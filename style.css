@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: blue;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: blue;
+    text-shadow: 0px 0px 10px blue;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    margin: 0 15px;
+    font-size: 1.5rem;
+}
+
+.link a {
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.link a:hover {
+    color: blue;
+}
+
+.hamburg {
+    display: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    background: black;
+}
+
+.dropdown .links {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.dropdown a {
+    color: white;
+    padding: 8px 0;
+    font-size: 1.5rem;
+}
+
+.cancel {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0 solid black;
+    box-shadow: 0 0 30px rgba(10, 44, 237, 0.679);
+}
+
+.content {
+    flex: 1;
+    max-width: 700px;
+    margin-left: 20px;
+    color: white;
+    text-align: left;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+}
+
+.content span {
+    color: blue;
+    text-shadow: 0px 0px 10px blue;
+}
+
+.typewriter {
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+    display: inline-block;
+    border-right: 2px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(20, end), blink 0.5s step-end infinite;
+}
+
+.typewriter-text {
+    display: inline-block;
+    color: blue;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10rem;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.social-links {
+    display: inline-flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.social-links a {
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: blue;
+    background-color: transparent;
+    filter: drop-shadow(0 0 10px blue);
+}
+
+.btn button {
+    padding: 10px 20px;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn button:hover {
+    color: blue;
+    background-color: transparent;
+    border: 2px solid blue;
+    box-shadow: 0 0 40px blue;
+}
+
+
+/* About Section */
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.about-image img {
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 700px;
+    margin-left: 20px;
+    color: white;
+    text-align: left;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+}
+
+.about-content span {
+    color: blue;
+    text-shadow: 0px 0px 10px blue;
+}
+
+.btn button {
+    padding: 10px 20px;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn button:hover {
+    color: blue;
+    background-color: transparent;
+    border: 2px solid blue;
+    box-shadow: 0 0 40px blue;
+}
+
+/* Skills Section */
+/* General Styles */
+.skills {
+    background-color: black;
+    padding: 50px 0;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.skills-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.skills-details .text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    color: white;
+    text-align: left;
+}
+
+.skills-details .text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-details .topic {
+    font-size: 1.5rem;
+    color: blue;
+    margin-bottom: 15px;
+}
+
+.skills-details p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.skills-details .experience {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.skills-details .experience .num {
+    font-size: 80px;
+    color: white;
+    font-weight: bold;
+}
+
+.skills-details .experience .exp {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+/* Skills Boxes */
+.skills-details .boxes {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+}
+
+.skills-details .box {
+    flex: 1 1 calc(50% - 20px); /* 2 boxes per row */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.skills-details .box .topic {
+    font-size: 1.2rem;
+    color: blue;
+    margin-bottom: 10px;
+}
+
+.skills-details .box .per {
+    font-size: 3rem;
+    color: blue;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skills-details .text,
+    .skills-details .boxes {
+        flex: 1 1 100%;
+    }
+
+    .skills-details .box {
+        flex: 1 1 100%; /* Full-width boxes on small screens */
+    }
+}
+
+/* Services Section */
+.services {
+    background: black; 
+    padding: 50px 0; 
+}
+
+.services .content {
+    max-width: 1200px; 
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add padding for smaller screens */
+}
+
+.services .content .title {
+    text-align: center; /* Matches Skills section alignment */
+    margin-bottom: 40px;
+    color: white;
+}
+
+.services .content .title h1 {
+    font-size: 2.5rem;
+    color: blue; /* Consistent section title color */
+}
+
+.services .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Add spacing between boxes */
+}
+
+.services .boxes .box {
+    flex: 1 1 calc(50% - 20px); /* Two boxes per row */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+
+.services .boxes .box:hover {
+    background: blue;
+    color: white;
+    transform: translateY(-10px); /* Hover effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.services .boxes .box .icon {
+    width: 60px;
+    height: 60px;
+    background: blue;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    transition: all 0.4s ease;
+}
+
+.services .boxes .box:hover .icon {
+    background: white;
+    color: blue;
+}
+
+.services .boxes .box .topic {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: color 0.4s ease;
+}
+
+.services .boxes .box p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+    transition: color 0.4s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services .boxes .box {
+        flex: 1 1 100%; /* Single-column layout on smaller screens */
+    }
+}
+
+/* Contact Section */
+.contact {
+    background: black;
+    padding: 50px 0;
+}
+
+.contact .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.contact .title h1 {
+    font-size: 2.5rem;
+    color: blue;
+    margin-bottom: 20px;
+}
+
+.contact .text .topic {
+    font-size: 1.8rem;
+    margin: 10px 0 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.contact .text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.contact .button .btn {
+    background: blue;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+}
+
+.contact .button .btn:hover {
+    background: white;
+    color: blue;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* footer Section */
+footer{
+    background: blue;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .text span{
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+}
+
+footer .text span a{
+    font-weight: 500;
+    color: white;
+}
+
+footer .text span a:hover{
+    text-decoration: underline;
+}
+
