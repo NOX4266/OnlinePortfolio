@@ -189,23 +189,6 @@ nav {
     filter: drop-shadow(0 0 10px blue);
 }
 
-.btn button {
-    padding: 10px 20px;
-    border: none;
-    background-color: blue;
-    color: white;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn button:hover {
-    color: blue;
-    background-color: transparent;
-    border: 2px solid blue;
-    box-shadow: 0 0 40px blue;
-}
-
 
 /* About Section */
 .about-container {
@@ -455,6 +438,95 @@ nav {
     }
 }
 
+/* My Projects Section */
+.projects {
+    background: black;
+    padding: 50px 0;
+}
+
+.projects .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.projects .content .title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.projects .content .title h1 {
+    font-size: 2.5rem;
+    color: blue;
+}
+
+.projects .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.projects .boxes .box {
+    flex: 1 1 calc(50% - 20px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+
+.projects .boxes .box:hover {
+    background: blue;
+    color: white;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects .boxes .box .description h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: color 0.4s ease;
+}
+
+.projects .boxes .box .description p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+    transition: color 0.4s ease;
+}
+
+.projects .boxes .box .download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: blue;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.projects .boxes .box .download-btn:hover {
+    background: white;
+    color: blue;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects .boxes .box {
+        flex: 1 1 100%;
+    }
+}
+
 /* Contact Section */
 .contact {
     background: black;
@@ -500,9 +572,10 @@ nav {
 }
 
 .contact .button .btn:hover {
-    background: white;
     color: blue;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    border: 2px solid blue;
+    box-shadow: 0 0 40px blue;
 }
 
 /* footer Section */
@@ -527,4 +600,5 @@ footer .text span a{
 footer .text span a:hover{
     text-decoration: underline;
 }
+
 
